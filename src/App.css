@@ -1,0 +1,22 @@
+.app_body {
+  overflow: auto;
+  max-height: calc(100vh - 56px);
+  min-height: calc(100vh - 56px);
+}
+
+.app_body main {
+  flex-grow: 1;
+}
+
+.top_nav_bar a,
+.top_nav_bar a:hover {
+  text-decoration: none;
+  color: var(--bs-dropdown-link-color);
+}
+
+@media (min-width: 768px) {
+  .sticky_side_nav {
+    position: sticky;
+    top: 0;
+  }
+}
