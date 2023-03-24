@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mfe-doc/static/css/main.37fdc749.css",
+    "main.js": "/mfe-doc/static/js/main.c3a49900.js",
+    "static/js/787.b2859434.chunk.js": "/mfe-doc/static/js/787.b2859434.chunk.js",
+    "static/media/3-Architecture.md": "/mfe-doc/static/media/3-Architecture.0afc9fe7b6fd8704ee5d.md",
+    "static/media/7-Conclusion and future.md": "/mfe-doc/static/media/7-Conclusion and future.4304f696d4cf67ad0919.md",
+    "static/media/6-Challenges and considerations.md": "/mfe-doc/static/media/6-Challenges and considerations.82d6228d9a2ecb7451ef.md",
+    "static/media/4-Implementing micro frontends.md": "/mfe-doc/static/media/4-Implementing micro frontends.f18c0f424154f1f8b56a.md",
+    "static/media/5-Use cases and examples.md": "/mfe-doc/static/media/5-Use cases and examples.39e598493293eddb6b64.md",
+    "static/media/2-Overview.md": "/mfe-doc/static/media/2-Overview.a7b406c6a8f3ff18fd51.md",
+    "static/media/1-Introduction.md": "/mfe-doc/static/media/1-Introduction.a6811ade49bf34ddbf4d.md",
+    "index.html": "/mfe-doc/index.html",
+    "main.37fdc749.css.map": "/mfe-doc/static/css/main.37fdc749.css.map",
+    "main.c3a49900.js.map": "/mfe-doc/static/js/main.c3a49900.js.map",
+    "787.b2859434.chunk.js.map": "/mfe-doc/static/js/787.b2859434.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37fdc749.css",
+    "static/js/main.c3a49900.js"
+  ]
+}
