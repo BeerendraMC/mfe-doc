@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { getHeaderIdFromInnerText } from '../utils/utility-functions';
+import CodeBlock from './CodeBlock';
 
 const Documentation = ({ markdownFiles }) => {
   const [markdown, setMarkdown] = useState('');
@@ -25,6 +26,7 @@ const Documentation = ({ markdownFiles }) => {
               {props.children}
             </h1>
           ),
+          code: CodeBlock,
         }}
       />
     </div>

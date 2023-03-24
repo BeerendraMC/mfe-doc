@@ -10,7 +10,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="mfe-doc">
       <div className="d-flex flex-column">
         <TopNav />
         <div className="app_body d-flex flex-column">
