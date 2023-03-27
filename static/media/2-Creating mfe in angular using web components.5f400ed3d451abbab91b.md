@@ -1,10 +1,10 @@
 # Creating MFE in Angular using Web Components
 
-Angular is a popular framework for building web applications. It provides a powerful set of tools for building complex, interactive applications. Angular can also be used to create micro frontends using the web components architecture.
+Angular is a popular framework for building web applications. It provides a powerful set of tools for building complex, interactive applications. Angular can also be used to create micro frontends using the **web components** architecture.
 
-To create a web component in Angular, we can use the @angular/elements package. This package provides a way of converting Angular components into web components that can be used in any web application.
+To create a web component in Angular, we can use the `@angular/elements` package. This package provides a way of converting Angular components into web components that can be used in any web application.
 
-Here's a step-by-step guide to creating a micro frontend in Angular using web components:
+Here's a step-by-step guide to create a micro frontend in Angular using web components:
 
 ### Step 1: Create an Angular application
 
@@ -34,7 +34,7 @@ export class GreetingComponent {
 }
 ```
 
-This component takes a name input, displays a greeting and emits an event on button click.
+This component takes a name input, displays a greeting and emits an event with the greeting string on button click.
 
 ### Step 3: Convert the Angular Component into a Web Component
 
@@ -48,8 +48,8 @@ Next, we need to convert the Angular component into a web component. We can do t
 
 ```typescript
 import { Injector, NgModule } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
+import { createCustomElement } from '@angular/elements';
 import { GreetingComponent } from './greeting.component';
 
 @NgModule({
@@ -69,11 +69,11 @@ export class AppModule implements DoBootstrap {
 }
 ```
 
-This code converts our GreetingComponent into a web component with the name my-greeting.
+This code converts our `GreetingComponent` into a web component with the name `my-greeting`.
 
 ### Step 4: Build the component
 
-When we build an angular application we get 3 javascript files **main.js**, **polyfill.js** and **runtime.js**. For mfe we need to merge these three files using the below script. Create a file called **build-elements.js** and add below code in it and install `fs-extra` and `concat` npm packages as dev dependencies: `npm i -D fs-extra concat`
+When we build an angular application we get 3 javascript files **main.js**, **polyfills.js** and **runtime.js**. For mfe we need to merge these three files using the below script. Create a file called **build-elements.js** in the root directory of the application and add below code in it and install `fs-extra` and `concat` npm packages as dev dependencies: `npm i -D fs-extra concat`
 
 ```javascript
 const fs = require('fs-extra');
@@ -84,14 +84,14 @@ const concat = require('concat');
     const project = process.argv.slice(2)[0];
     const srcPath = `./dist/${project}`;
     const dstPath = `./elements/${project}`;
-    const files_es_2015 = [
+    const filesToBeMerged = [
       `${srcPath}/runtime.js`,
       `${srcPath}/polyfills.js`,
       `${srcPath}/main.js`,
     ];
 
     await fs.ensureDir(dstPath);
-    await concat(files_es_2015, `${dstPath}/${project}-element.js`);
+    await concat(filesToBeMerged, `${dstPath}/${project}-element.js`);
     await fs.copyFile(
       `${srcPath}/styles.css`,
       `${dstPath}/${project}-styles.css`
@@ -117,6 +117,8 @@ Then run `npm run build:element` command to get the mfe files (`mfe-app-element.
 ### Step 5: Use the web component
 
 Reference the `js` and `css` files of the mfe in the host application and use the custom element (`my-greeting` in our case) as a normal html tag:
+
+Note: since the events emitted by the custom elements are of type [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent), make sure to use the `detail` property to get the emitted value from the mfe
 
 ```html
 <!DOCTYPE html>
