@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 const TopNav = () => {
   return (
-    <Navbar bg="light" expand="lg" className="top_nav_bar">
+    <Navbar bg="light" expand="lg" className="top_nav_bar shadow">
       <Container>
         <Navbar.Brand>
           <NavLink to="/">MFE Doc</NavLink>
