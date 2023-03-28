@@ -4,7 +4,7 @@ Micro-frontend architecture is a modular approach to front-end development that 
 
 ### Module Federation
 
-Module Federation is a JavaScript implementation of micro-frontends that allows developers to share modules across different applications. It enables developers to build multiple small applications and then bundle them together in a single container application. The container application acts as a host and dynamically loads the different micro-frontends on demand. Module Federation makes it easier to develop, test, and deploy different applications independently while maintaining a cohesive user experience.
+Module Federation makes sharing code and dependencies between different code bases easier. This architecture loads the code dynamically at runtime to reduce the frequency of code duplication. Module federation works by allowing one application to expose certain modules or components as "remotes", which can be consumed by other applications as if they were part of their own codebase. This enables different micro frontends to share functionality and resources, such as stylesheets, templates, and scripts, without having to copy and paste code between them.
 
 Advantages
 
@@ -16,9 +16,8 @@ Advantages
 Disadvantages:
 
 - **Increased Complexity**: Implementing Module Federation can add complexity to the front-end development process, as teams need to coordinate and manage the shared modules.
-- **Dependency Management**: With Module Federation, teams need to carefully manage dependencies between different front-end modules, which can be challenging in a distributed environment.
-- **Potential Performance Overhead**: While Module Federation can improve front-end application performance, it may also introduce additional overhead due to the need to dynamically load and manage shared modules.
-- **Limited Browser Compatibility**: Module Federation relies on modern browser features such as ES6 module loading, which may not be supported by all browsers, limiting the compatibility of the resulting application.
+- **Framework Dependent**: When using module federation with Angular, React, or Vue JS frameworks, it’s important to note that each module must be built using the same framework. This is because module federation relies on the ability to share code and components between different modules, and the code and components must be written in a way that is compatible with the chosen framework. This can be a limitation for teams that are using different frameworks within the same application.
+- **Requires the same version of dependencies across all MFEs**: One of the main disadvantages of module federation is that it requires the same version of dependencies across all micro frontends. This can be limiting, as it may be difficult to ensure that all micro frontends are using the same version of a particular dependency, especially if they are developed by different teams or maintained by different organizations.
 
 ### Single-spa
 
@@ -35,7 +34,7 @@ Disadvantages:
 - **Increased Complexity**: Single SPA introduces a lot of complexity to your application, as it requires you to manage the lifecycle of multiple micro frontends and handle communication between them. This can be difficult to debug and maintain, especially for large and complex applications.
 - **Potential Performance Overhead**: While lazy loading can improve application performance, it may also introduce additional overhead as it needs to load and unload multiple micro frontends dynamically. This can lead to longer load times and a less smooth user experience.
 - **Limited Customizability**: Single SPA has a set of conventions that you must follow to create your micro frontends. This can be limiting in cases where you need to customize the library to fit your needs.
-- **Limited Browser Compatibility**: Single-spa relies on modern browser features such as ES6 module loading, which may not be supported by all browsers, limiting the compatibility of the resulting application.
+- **Framework dependency**: Depending on a framework has its own disadvantages. It will require changes to the code and consistent updates to the framework. As usual, when the framework is old or deprecated, you will need to re-factor and re-build the entire site to follow the latest technology.
 - **Increased Learning Curve**: Single-spa requires learning a new framework and development paradigm, which can be a barrier to entry for developers who are not familiar with it.
 
 ### Web Components

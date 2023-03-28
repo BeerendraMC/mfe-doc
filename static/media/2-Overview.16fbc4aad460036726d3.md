@@ -24,5 +24,6 @@ Disadvantages of micro-frontend include:
 - Increased complexity and coordination between modules
 - Potential performance issues if not implemented properly
 - Dependency management challenges
+- Styling issues caused by mfe styles getting overridden by host styles and vice versa
 
 Overall, micro-frontend is a powerful approach to front-end development that can help teams work more efficiently and effectively. However, it also comes with its own set of challenges and requires careful consideration and planning to implement successfully.
