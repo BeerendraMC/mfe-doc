@@ -28,13 +28,14 @@ Advantages
 - **Increased Flexibility**: Single-spa allows you to build independent micro-frontends using different frameworks and technologies, making it easier to adapt to different business requirements and changing needs.
 - **Improved Reusability**: Single-spa promotes code reuse and modularity across different micro-frontends, reducing code duplication and making it easier to maintain and update front-end modules.
 - **Improved Performance**: Single-spa allows for lazy loading of micro-frontends, improving the performance of the overall application by reducing the initial load time.
+- **Framework Agnostic**: Single-spa allows us to club multiple micro-frontends built using different frameworks like Angular, React and Vue JS into a single page.
 
 Disadvantages:
 
 - **Increased Complexity**: Single SPA introduces a lot of complexity to your application, as it requires you to manage the lifecycle of multiple micro frontends and handle communication between them. This can be difficult to debug and maintain, especially for large and complex applications.
 - **Potential Performance Overhead**: While lazy loading can improve application performance, it may also introduce additional overhead as it needs to load and unload multiple micro frontends dynamically. This can lead to longer load times and a less smooth user experience.
 - **Limited Customizability**: Single SPA has a set of conventions that you must follow to create your micro frontends. This can be limiting in cases where you need to customize the library to fit your needs.
-- **Framework dependency**: Depending on a framework has its own disadvantages. It will require changes to the code and consistent updates to the framework. As usual, when the framework is old or deprecated, you will need to re-factor and re-build the entire site to follow the latest technology.
+- **Framework Dependency**: Depending on a framework has its own disadvantages. It will require changes to the code and consistent updates to the framework. As usual, when the framework is old or deprecated, you will need to re-factor and re-build the entire site to follow the latest technology.
 - **Increased Learning Curve**: Single-spa requires learning a new framework and development paradigm, which can be a barrier to entry for developers who are not familiar with it.
 
 ### Web Components
@@ -45,13 +46,12 @@ Advantages
 
 - **Increased Flexibility**: Web Components are framework-agnostic, meaning they can be used with any front-end framework or technology, making it easier to adapt to different business requirements and changing needs.
 - **Improved Reusability**: Web Components promote code reuse and modularity across different micro-frontends, reducing code duplication and making it easier to maintain and update front-end modules.
-- **Simplified Development**: With Web Components, developers can focus on building independent micro-frontends, reducing the need for tightly coupled dependencies and simplifying the front-end development process.
-- **Improved Performance**: Web Components are optimized for performance and can be easily cached, improving the performance of the overall application by reducing the initial load time.
+- **Framework Interoperability**: Web components created in different frameworks like Angular, React and Vue Js can be integrated into a single host as they are designed to be interoperable and reusable across different frameworks and platforms.
 - **Ease of Testing**: Web Components provide a standardized testing interface, making it easier to test individual micro-frontends and the overall application.
 
 Disadvantages:
 
-- **Potential Performance Overhead**: While Web Components are optimized for performance, they may introduce additional overhead due to the need to load and manage different components.
+- **Potential Performance Overhead**: While Web Components are optimized for performance, they may introduce additional overhead as all MFEs need to load and manage all the required modules independently.
 - **Increased Learning Curve**: Web Components require learning a new development paradigm, which can be a barrier to entry for developers who are not familiar with it.
 - **Potential routing problem**: Web components are designed to be self-contained and independent of the surrounding application. This can make it challenging to implement routing between different web components in a way that is intuitive and seamless for the user.
 

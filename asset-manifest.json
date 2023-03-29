@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/mfe-doc/static/css/main.37fdc749.css",
-    "main.js": "/mfe-doc/static/js/main.5b9504a3.js",
+    "main.js": "/mfe-doc/static/js/main.8ed19d2d.js",
     "static/js/787.b2859434.chunk.js": "/mfe-doc/static/js/787.b2859434.chunk.js",
-    "static/media/3-Architecture.md": "/mfe-doc/static/media/3-Architecture.8ab058674bad6f70104d.md",
+    "static/media/3-Architecture.md": "/mfe-doc/static/media/3-Architecture.4f5d6efa618ec334a255.md",
     "static/media/2-Creating mfe in angular using web components.md": "/mfe-doc/static/media/2-Creating mfe in angular using web components.5f400ed3d451abbab91b.md",
     "static/media/3-Deployment and versioning options.md": "/mfe-doc/static/media/3-Deployment and versioning options.9214719f4f011ff72f7e.md",
     "static/media/7-Conclusion and future.md": "/mfe-doc/static/media/7-Conclusion and future.4304f696d4cf67ad0919.md",
@@ -15,11 +15,11 @@
     "static/media/1-Introduction.md": "/mfe-doc/static/media/1-Introduction.a6811ade49bf34ddbf4d.md",
     "index.html": "/mfe-doc/index.html",
     "main.37fdc749.css.map": "/mfe-doc/static/css/main.37fdc749.css.map",
-    "main.5b9504a3.js.map": "/mfe-doc/static/js/main.5b9504a3.js.map",
+    "main.8ed19d2d.js.map": "/mfe-doc/static/js/main.8ed19d2d.js.map",
     "787.b2859434.chunk.js.map": "/mfe-doc/static/js/787.b2859434.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.37fdc749.css",
-    "static/js/main.5b9504a3.js"
+    "static/js/main.8ed19d2d.js"
   ]
 }
